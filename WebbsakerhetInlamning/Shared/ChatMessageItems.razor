@@ -1,0 +1,30 @@
+﻿@using WebbsakerhetInlamning.Models
+@if(items != null)
+{
+    <ul class="list-group">
+        @foreach(var item in items)
+        {
+            <ChatMessageItem Item=item />
+        }
+    </ul>
+}
+else
+{
+    
+}
+
+@code {
+    private List<ChatMessage> items = new List<ChatMessage>();
+
+   /* private async Task PopulateMessagesAsync()
+    {       
+        items = await Http.GetFromJsonAsync<IEnumerable<ChatMessage>>("https://localhost:7153/api/chatmessages");
+        StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {       
+        await PopulateMessagesAsync();
+        StateHasChanged();
+    }*/
+}
